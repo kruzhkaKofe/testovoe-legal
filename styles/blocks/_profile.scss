@@ -1,0 +1,130 @@
+@use '../variables';
+
+.profile {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto auto 1fr;
+
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    column-gap: .8rem;
+    
+    &__image {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        align-self: center;
+
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+
+    &__name {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        font-weight: 600;
+        align-self: center;
+    }
+
+    &__period {
+        color: var(--secondary-color);
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+        justify-self: end;
+
+        & > span {
+            display: none;
+        }
+
+        @media screen and (min-width: variables.$break-point) {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+
+            & > span {
+                display: inline;
+            }
+        }
+    }
+
+    &__results {
+        display: none;
+        
+        &--short {
+            display: grid;
+            grid-column: 2 / 4;
+            grid-template-columns: repeat(4, auto) 1fr;
+        }
+
+        @media screen and (min-width: variables.$break-point) {
+            grid-row: 1 / 3;
+            grid-column: 3 / 4;
+            column-gap: 1.2rem;
+
+            display: grid;
+            grid-template-columns: repeat(5, minmax(7rem, 1fr));
+            justify-self: end;
+            
+            &--short {
+                display: none;
+            }
+        }
+
+        
+        &-item {
+            &:last-child {
+                justify-self: end;
+
+                &.--success {
+                    font-weight: 600;
+                }
+            }
+    
+            &:nth-child(-n+3)::after {
+                content: '/';
+                padding-inline: .4rem;
+                color: var(--secondary-color);
+            }
+
+            @media screen and (min-width: variables.$break-point) {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+
+                & > p:first-child {
+                    position: relative;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    padding-bottom: 0.4rem;
+
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        content: '';
+                        height: 1px;
+                        width: 100%;
+                        background-color: var(--super-light-color);
+                    }
+                }
+
+                & > p:last-child {
+                    padding-top: 0.4rem;
+                    font-weight: 600;
+                }
+                
+                &:last-child {
+                    justify-self: auto;
+                }
+
+                &:nth-child(-n+3)::after {
+                    content: none;
+                }
+            }
+        }
+    }   
+}

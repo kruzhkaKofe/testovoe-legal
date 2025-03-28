@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Карточка для тестового задания">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <article class="card">
+        <div class="card__inner">
+            <header class="card__header">
+                <div class="profile">
+                    <div class="profile__image">
+                        <picture>
+                            <source srcset="assets/profile.webp" type="image/webp">
+                            <img src="assets/profile.png" alt="Фото профиля">
+                        </picture>
+                    </div>
+                    <p class="profile__name">Владимир Вуйтек</p>
+                    <p class="profile__period">
+                        <span>
+                            Статистика за последние
+                        </span>
+                        <time datetime="30 дней">
+                            30 дней
+                        </time>
+                    </p>
+                    <div class="profile__results">
+                        <div class="profile__results-item --success">
+                            <p>+</p>
+                            <p>647</p>
+                        </div>
+                        <div class="profile__results-item --neutral">
+                            <p>=</p>
+                            <p>29</p>
+                        </div>
+                        <div class="profile__results-item --danger">
+                            <p>—</p>
+                            <p>413</p>
+                        </div>
+                        <div class="profile__results-item">
+                            <p>ROI, %</p>
+                            <p class="--success">23,9%</p>
+                        </div>
+                        <div class="profile__results-item">
+                            <p>Прибыль</p>
+                            <p class="--success">+22 820</p>
+                        </div>
+                    </div>
+                    <div class="profile__results profile__results--short">
+                        <p class="profile__results-item --success">647</p>
+                        <p class="profile__results-item --neutral">29</p>
+                        <p class="profile__results-item --danger">413</p>
+                        <p class="profile__results-item">ROI 23,9%</p>
+                        <p class="profile__results-item --success">+22 820</p>
+                    </div>
+                </div>
+            </header>
+            <div class="divider"></div>
+            <div class="prediction prediction--collapsed">
+                <p class="prediction__text">
+                    В Кубке страны команда Унаи Эмери бессовестно размялась на «Виктории» из Ла-Коруньи (8:0). При этом серьёзные соперники: «Севилья», «Барселона» (даже кризисная) и «МЮ» (ещё более кризисный) — били «Вильярреал». ЛЧ не турнир для Эмери. Он гроссмейстер убогой ЛЕ. Поэтому у «Аталанты» есть шансы. Ей необходимо играть лишь на победу. Только выигрыш выводит её в плей-офф ЛЧ. А поражение в комплекте с победой «Янг Бойз» над «МЮ» оставляет бергамасков без еврокубковой весны. Гасперини вполне по силам одолеть команду Эмери. «Аталанта» уже обыгрывала недавно «Юве» и «Наполи». Поставлю на победу итальянского клуба.
+                </p>
+                <div class="prediction__footer">
+                    <button class="prediction__button" aria-label="Раскрыть текст">
+                        <img src="assets/arrow.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="card__footer">
+            <div class="forecast">
+                <h2 class="forecast__title">ПРОГНОЗ</h2>
+                <p class="forecast__offer">Штрафное время: тотал меньше 16,5</p>
+                <div class="ratio forecast__ratio">
+                    <div class="ratio__logo">
+                        <img src="assets/logo.svg" alt="1X">
+                    </div>
+                    <div class="ratio__description">
+                        <p class="ratio__description-title">
+                            Коэффициент
+                        </p>
+                        <p class="ratio__description-title ratio__description-title--short">
+                            Кэф
+                        </p>
+                        <p class="ratio__description-value">3.22</p>
+                    </div>
+                </div>
+                <button class="forecast__button">Сделать ставку</button>
+            </div>
+        </footer> 
+    </article>
+    <script src="script.js"></script>
+</body> 
+</html>

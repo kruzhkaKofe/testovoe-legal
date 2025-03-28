@@ -1,0 +1,54 @@
+.prediction {
+    position: relative;
+
+    &__text {
+        position: relative;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--secondary-color);
+        transition: max-height var(--default-transition-time) ease-out;
+        padding-bottom: 2.5rem;
+        max-height: 14rem;
+        overflow: hidden;
+    }
+
+    &__footer {
+        position: relative;
+    }
+
+    &--collapsed > &__footer::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff 79.69%);
+        height: 7.5rem;
+        left: 0;
+        bottom: 0;        
+        pointer-events: none;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        box-shadow: 2rem 4rem 12rem 0 var(--default-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: var(--primary-background);
+        border: transparent;
+        
+        & > img {
+            transition: var(--default-transition-time);
+            transform: rotate(180deg);
+        }
+    }
+
+    &--collapsed &__button > img {
+        transform: rotate(0deg);
+    }
+}

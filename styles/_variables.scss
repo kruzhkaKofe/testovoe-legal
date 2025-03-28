@@ -1,0 +1,20 @@
+:root {
+    --primary-background: #FFF;
+    --secondary-background: #F0F1F266;
+    --primary-color: #000000CC;
+    --secondary-color: #00000066;
+    --super-light-color: #0000001A;
+    --light-gray-color: #A1AAB2;
+    --success-color: #62B435;
+    --danger-color: #F64747;
+    --accent-color: #3498DB;
+    --dark-blue-color: #103852;
+    --default-shadow: #00000014;
+    --default-transition-time: .4s;
+
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+}
+
+$break-point: 744px;

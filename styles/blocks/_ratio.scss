@@ -1,0 +1,47 @@
+@use '../variables';
+
+.ratio {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+
+    &__logo {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .4rem;
+        background-color: var(--dark-blue-color);
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+
+        &-title {
+            display: none;
+    
+            &--short {
+                display: block;
+            }
+    
+            @media screen and (min-width: variables.$break-point) {
+                display: block;
+    
+                &--short {
+                    display: none;
+                }
+            }
+        }
+
+        &-value {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            font-weight: 500;
+        }
+    }
+}
